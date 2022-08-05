@@ -108,14 +108,14 @@ public class TestUtils extends Mod{
             t.checkPref("tu-fill-all", false);
             t.sliderPref("tu-long-press", 2, 1, 12, s -> Strings.autoFixed(s / 4f, 2));
 
-            if(OS.username.equals("John")) t.checkPref("tu-mobile-test", false);
+            if(true) t.checkPref("tu-mobile-test", false);
         });
 
         ui.settings.game.checkPref("console", true); //Dev Mode
     }
 
     public static boolean disableCampaign(){
-        return state.isCampaign() && !OS.username.equals("John");
+        return false;
     }
 
     static class TeamSetting extends Setting{
